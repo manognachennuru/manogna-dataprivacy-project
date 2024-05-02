@@ -12,10 +12,10 @@ model: "resnet18"
 
 compress: "none"
 
-fed_lr: 0.003
+fed_lr: 0.0001
 tau: 10
 
-batch_size: 16
+batch_size: 4
 rog_lr: 0.05
 
 T_max: 100
@@ -29,7 +29,7 @@ sample_size:
 - 128
 - 128
 channels: 3
-num_classes: 1000
+num_classes: 2
 
 thres: 2
 dpsnr: -20
