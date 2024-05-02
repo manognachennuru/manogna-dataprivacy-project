@@ -1,54 +1,30 @@
 ### Exploring Privacy Risks: Reconstructing Medical Images from Obfuscated Gradients in Federated Learning
 
-Federated learning offers collaborative machine learning while preserving data privacy. However, concerns persist regarding privacy in medical image analysis. Leveraging a reconstruction attack framework proposed by Yue et al., I aim to assess gradient obfuscation techniques' effectiveness in safeguarding patient privacy. With medical images being highly sensitive, I'll evaluate methods like gradient noise injection, compression, and quantization. Through experiments with real-world medical datasets, I'll quantify potential privacy leaks and assess the impact on model utility. Balancing privacy with model performance is crucial in healthcare. This project aims to contribute to more robust privacy protection mechanisms, enhancing patient confidentiality in medical image analysis within federated learning.
+## Credits
 
-Dataset Used: chest-xray: https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
+This project is inspired by and builds upon the work of [Kai Yue, Richeng Jin, Chau-Wai Wong, Dror Baron, and Huaiyu Dai] in their paper "Gradient Obfuscation Gives a False Sense of Security in Federated Learning". I extend our sincere appreciation to them for their valuable contributions to the field of federated learning and privacy-preserving machine learning. 
+
+Link to the original project: [Gradient Obfuscation Gives a False Sense of Security in Federated Learning](https://github.com/KAI-YUE/rog)
+
+During my data privacy course at UNC Charlotte, I was asked to present the above paper as part of the course curriculum. It was during this presentation () that I became interested in the project and decided to work on it for my own project.
+
+
+## Introduction
+
+Federated learning, a collaborative machine learning framework, has gained traction for its ability to train models across decentralized data sources without sharing raw data. However, concerns persist regarding privacy vulnerabilities, particularly in sensitive domains like medical image analysis. Leveraging a reconstruction attack framework proposed by Yue et al., this project investigates the efficacy of gradient obfuscation techniques in safeguarding patient privacy within federated learning settings.
+
+## Project Overview
+
+### Motivation and Objectives
+With the aim of balancing privacy protection and model utility in healthcare, this project assesses the effectiveness of gradient obfuscation techniques, including intentional noise injection and unintentional compression, in mitigating reconstruction attacks on medical image datasets. The primary objectives include:
+- Evaluating privacy risks associated with federated learning in medical image analysis.
+- Assessing the impact of gradient obfuscation techniques on model privacy and performance.
+
+
+## Usage
+
+For instructions on running the code and reproducing the experiments, please refer to the accompanying [File](https://github.com/manognachennuru/manogna-dataprivacy-project/blob/main/dp_project_instructions.ipynb)
+
+[Dataset Used](chest-xray: https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 
 <img src="doc/results.PNG" width=600>
-
-### References : https://github.com/KAI-YUE/rog. 
-### Gradient Obfuscation Gives a False Sense of Security in Federated Learning
-![](https://img.shields.io/badge/Python-3-blue) ![](https://img.shields.io/badge/Pytorch-1.9.0-blue)
-
-Federated learning has been proposed as a privacy-preserving machine learning framework that enables multiple clients to collaborate without sharing raw data. However, client privacy protection is not guaranteed by design in this framework.  Prior work has shown that the gradient sharing strategies in federated learning can be vulnerable to server data reconstruction attacks. In practice, though, clients may not transmit raw gradients considering the high communication cost or due to privacy enhancement requirements. Empirical studies have demonstrated that gradient obfuscation, including the intentional gradient noise injection and the unintentional gradient compression, can provide more privacy protection against reconstruction attacks. In this work, we present a new data reconstruction attack framework targeting the image classification task in federated learning.
-
-<br />
-
-#### Prerequisites
-
-- install Python packages
-    ```bash
-    pip3 install -r requirements.txt
-    ```
-
-- Download the pretrained models and put them under `model_zoos` ([link](https://huggingface.co/erickyue/rog_modelzoo/tree/main))
-
-- Download the csv file (https://storage.googleapis.com/openimages/v6/oidv6-class-descriptions.csv) and put it under `data` folder
-
-- The images for a minimal runnable example has been included under `data` folder. The ImageNet validation dataset can be used for a full test. 
-
-<br />
-
-#### Example
-
-
-- Run the example with QSGD: 
-    ```bash
-    python3 main.py
-    ```
-    The script will load the configuration file `config.yaml`. The results will be stored under `experiments`.
-
-- Run the example with FedAvg:
-    ```bash
-    python3 attack_fedavg.py
-    ```
-    The script will load the configuration file `config_fedavg.yaml`. 
-
-
-    You can change the settings in the configuration file. For example, use a different compression scheme with 
-    ```
-    compress: topk
-    ```
-
-<br />
-
