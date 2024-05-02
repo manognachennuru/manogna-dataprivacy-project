@@ -1,13 +1,12 @@
-### Exploring Privacy Risks: Reconstructing Medical Images from Obfuscated Gradients in Federated Learning
+# Exploring Privacy Risks: Reconstructing Medical Images from Obfuscated Gradients in Federated Learning
 
 ## Credits
 
-This project is inspired by and builds upon the work of [Kai Yue, Richeng Jin, Chau-Wai Wong, Dror Baron, and Huaiyu Dai] in their paper "Gradient Obfuscation Gives a False Sense of Security in Federated Learning". I extend our sincere appreciation to them for their valuable contributions to the field of federated learning and privacy-preserving machine learning. 
+This project is inspired by and builds upon the work of [Kai Yue, Richeng Jin, Chau-Wai Wong, Dror Baron, and Huaiyu Dai] in their paper "Gradient Obfuscation Gives a False Sense of Security in Federated Learning". I extend my sincere appreciation to them for their valuable contributions to the field of federated learning and privacy-preserving machine learning. 
 
-Link to the original project: [Gradient Obfuscation Gives a False Sense of Security in Federated Learning](https://github.com/KAI-YUE/rog)
+Link to the original project: [Gradient Obfuscation Gives a False Sense of Security in Federated Learning](https://github.com/KAI-YUE/rog).
 
-During my data privacy course at UNC Charlotte, I was asked to present the above paper as part of the course curriculum. It was during this presentation () that I became interested in the project and decided to work on it for my own project.
-
+During my data privacy course at UNC Charlotte, I was asked to present the above paper as part of the course curriculum. It was during this presentation that I became interested in the project and decided to work on it for my own project.
 
 ## Introduction
 
@@ -20,11 +19,19 @@ With the aim of balancing privacy protection and model utility in healthcare, th
 - Evaluating privacy risks associated with federated learning in medical image analysis.
 - Assessing the impact of gradient obfuscation techniques on model privacy and performance.
 
-
 ## Usage
 
-For instructions on running the code and reproducing the experiments, please refer to the accompanying [File](https://github.com/manognachennuru/manogna-dataprivacy-project/blob/main/dp_project_instructions.ipynb)
+For instructions on running the code and reproducing the experiments, please refer to the accompanying [Instructions Notebook](https://github.com/manognachennuru/manogna-dataprivacy-project/blob/main/dp_project_instructions.ipynb).
 
-[Dataset Used](chest-xray: https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
+## Dataset Used
+
+For this project, I utilized the Chest X-Ray Pneumonia dataset available on Kaggle. This dataset contains X-ray images of patients with and without pneumonia, making it suitable for evaluating privacy risks in medical image analysis within federated learning settings.
+
+[Link to Dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
+
+## Results
+
+After conducting experiments and evaluations, I observed significant insights regarding the effectiveness of gradient obfuscation techniques in safeguarding patient privacy within federated learning. The results are summarized in the image below:
 
 <img src="doc/results.PNG" width=600>
+
