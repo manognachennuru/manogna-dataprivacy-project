@@ -4,7 +4,8 @@
 
 This project is inspired by and builds upon the work of [Kai Yue, Richeng Jin, Chau-Wai Wong, Dror Baron, and Huaiyu Dai] in their paper "Gradient Obfuscation Gives a False Sense of Security in Federated Learning". I extend my sincere appreciation to them for their valuable contributions to the field of federated learning and privacy-preserving machine learning. 
 
-Link to the original project: [Gradient Obfuscation Gives a False Sense of Security in Federated Learning](https://github.com/KAI-YUE/rog).
+Link to the research paper: [Gradient Obfuscation Gives a False Sense of Security in Federated Learning](https://arxiv.org/abs/2206.04055)
+Link to the project: [ROG-REPO](https://github.com/KAI-YUE/rog).
 
 During my data privacy course at UNC Charlotte, I was asked to present the above paper as part of the course curriculum. It was during this presentation that I became interested in the project and decided to work on it for my own project.
 
